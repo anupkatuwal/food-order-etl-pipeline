@@ -1,0 +1,201 @@
+order_id,customer_name,customer_email,customer_phone,restaurant_name,restaurant_city,food_item,category,quantity,unit_price,total_amount,order_date,delivery_date,order_status,payment_method,delivery_address,driver_name,rating
+1001,Uma Clark,uma@email.com,555-1021,Burger Barn,Los Angeles,Classic Cheeseburger,Burger,3,9.99,29.97,2024-02-05 21:06:00,2024-02-05 22:14:00,Delivered,Debit Card,"124 Cedar Ave, San Francisco",Nina Lopez,5
+1002,Carol White,carol@email.com,555-1003,Pasta Primo,Miami,Lasagna,Italian,1,14.99,14.99,2024-02-25 13:32:00,2024-02-25 14:35:00,Delivered,Credit Card,"789 Elm St, Chicago",Isabella Martinez,5
+1003,Wendy Brown,wendy@email.com,555-1023,BBQ Brothers,Dallas,Loaded Fries,BBQ,2,8.99,17.98,2024-03-12 22:55:00,2024-03-12 23:20:00,Delivered,Apple Pay,"346 Oak Blvd, Austin",Tyler Johnson,5
+1004,Karen Thomas,karen@email.com,555-1011,Noodle House,Seattle,Ramen,Asian,2,12.5,25.0,2024-01-24 16:06:00,2024-01-24 16:53:00,Delivered,Credit Card,"852 Hickory Rd, Los Angeles",Chris Johnson,5
+1005,Zoe Scott,zoe@email.com,555-1026,Pizza Palace,New York,Vegetarian Pizza,Pizza,1,12.49,12.49,2024-05-21 14:53:00,2024-05-21 15:58:00,Delivered,Credit Card,"679 Birch Court, San Francisco",John Wu,5
+1006,Liam Jackson,liam@email.com,555-1012,Pasta Primo,Miami,Fettuccine Alfredo,Italian,1,12.99,12.99,2024-02-28 22:18:00,2024-02-28 22:48:00,Delivered,Google Pay,"963 Poplar Ave, Seattle",Isabella Martinez,5
+1007,Mia Harris,mia@email.com,555-1013,Noodle House,Seattle,Dumplings,Asian,3,8.99,26.97,2024-03-31 13:42:00,2024-03-31 14:24:00,Delivered,Cash,"159 Elm Park, Chicago",Priya Kumar,5
+1008,Uma Clark,uma@email.com,555-1021,Burger Barn,Los Angeles,Mushroom Swiss Burger,Burger,2,10.99,21.98,2024-03-03 12:29:00,,Cancelled,Google Pay,"124 Cedar Ave, San Francisco",,
+1009,Mia Harris,mia@email.com,555-1013,Noodle House,Seattle,Fried Rice,Asian,2,9.99,19.98,2024-01-15 13:52:00,,Pending,Cash,"159 Elm Park, Chicago",,
+1010,Bob Smith,bob@email.com,555-1002,Curry Corner,San Francisco,Chicken Tikka Masala,Indian,3,14.49,43.47,2024-05-25 21:20:00,2024-05-25 21:58:00,Delivered,Debit Card,"456 Oak Ave, Los Angeles",Alex Zhang,4
+1011,Carlos Evans,carlos@email.com,555-1029,Veggie Delight,Austin,Quinoa Salad,Healthy,3,9.99,29.97,2024-05-23 18:16:00,2024-05-23 19:28:00,Delivered,Debit Card,"902 Ash Lane, Dallas",Natalie Chen,4
+1012,Sam Walker,sam@email.com,555-1019,Grill Master,Phoenix,BBQ Ribs,Grill,2,21.99,43.98,2024-05-06 11:48:00,2024-05-06 12:16:00,Delivered,Apple Pay,"807 Spruce Lane, Houston",Jake Miller,3
+1013,Frank Miller,frank@email.com,555-1006,Grill Master,Phoenix,Lamb Chops,Grill,1,22.99,22.99,2024-06-01 17:33:00,2024-06-01 18:14:00,Delivered,PayPal,"987 Maple Dr, Los Angeles",Carlos Diaz,5
+1014,Alice Johnson,alice@email.com,555-1001,Burger Barn,Los Angeles,Mushroom Swiss Burger,Burger,3,10.99,32.97,2024-01-29 14:27:00,,Pending,Cash,"123 Main St, New York",,
+1015,Frank Miller,frank@email.com,555-1006,Veggie Delight,Austin,Buddha Bowl,Healthy,3,11.99,35.97,2024-05-09 11:55:00,,Cancelled,Debit Card,"987 Maple Dr, Los Angeles",,
+1016,Uma Clark,uma@email.com,555-1021,Noodle House,Seattle,Fried Rice,Asian,2,9.99,19.98,2024-02-11 18:49:00,2024-02-11 19:47:00,Delivered,Cash,"124 Cedar Ave, San Francisco",Amy Chen,5
+1017,Paul Rodriguez,paul@email.com,555-1016,Pizza Palace,New York,Pepperoni Pizza,Pizza,3,12.99,38.97,2024-01-15 13:56:00,2024-01-15 14:57:00,Delivered,Debit Card,"483 Maple Court, Los Angeles",Mike Ross,3
+1018,Paul Rodriguez,paul@email.com,555-1016,Burger Barn,Los Angeles,Mushroom Swiss Burger,Burger,2,10.99,21.98,2024-05-01 18:10:00,2024-05-01 18:51:00,Delivered,Google Pay,"483 Maple Court, Los Angeles",Nina Lopez,5
+1019,Noah Martin,noah@email.com,555-1014,Taco Town,Houston,Quesadilla,Mexican,2,7.49,14.98,2024-04-12 20:41:00,,Pending,Cash,"267 Oak Creek, Houston",,
+1020,Liam Jackson,liam@email.com,555-1012,Veggie Delight,Austin,Lentil Soup,Healthy,4,7.99,31.96,2024-02-27 11:21:00,2024-02-27 11:47:00,Delivered,Debit Card,"963 Poplar Ave, Seattle",Natalie Chen,5
+1021,Sam Walker,sam@email.com,555-1019,Taco Town,Houston,Chicken Tacos,Mexican,1,5.99,5.99,2024-01-16 13:04:00,,Pending,Google Pay,"807 Spruce Lane, Houston",,
+1022,Carlos Evans,carlos@email.com,555-1029,Pizza Palace,New York,BBQ Chicken Pizza,Pizza,1,13.99,13.99,2024-03-12 20:31:00,,Cancelled,Debit Card,"902 Ash Lane, Dallas",,
+1023,Grace Wilson,grace@email.com,555-1007,BBQ Brothers,Dallas,Smoked Brisket,BBQ,4,17.99,71.96,2024-04-14 13:06:00,2024-04-14 13:37:00,Delivered,PayPal,"147 Birch Ln, Chicago",Marcus Davis,4
+1024,Noah Martin,noah@email.com,555-1014,Grill Master,Phoenix,Grilled Chicken,Grill,1,14.99,14.99,2024-06-14 11:03:00,,Pending,Google Pay,"267 Oak Creek, Houston",,
+1025,Mia Harris,mia@email.com,555-1013,Curry Corner,San Francisco,Butter Chicken,Indian,2,13.99,27.98,2024-05-17 17:08:00,2024-05-17 18:00:00,Delivered,Debit Card,"159 Elm Park, Chicago",David Kim,4
+1026,Henry Moore,henry@email.com,555-1008,Burger Barn,Los Angeles,Double Smash Burger,Burger,1,13.99,13.99,2024-05-18 10:05:00,2024-05-18 11:18:00,Delivered,Google Pay,"258 Walnut Ave, Houston",Sara Lee,3
+1027,Paul Rodriguez,paul@email.com,555-1016,Veggie Delight,Austin,Quinoa Salad,Healthy,4,9.99,39.96,2024-04-07 10:24:00,2024-04-07 11:05:00,Delivered,Debit Card,"483 Maple Court, Los Angeles",Brandon Lee,4
+1028,Wendy Brown,wendy@email.com,555-1023,BBQ Brothers,Dallas,Loaded Fries,BBQ,2,8.99,17.98,2024-02-25 10:37:00,2024-02-25 11:49:00,Delivered,Cash,"346 Oak Blvd, Austin",Marcus Davis,3
+1029,Karen Thomas,karen@email.com,555-1011,Pizza Palace,New York,Pepperoni Pizza,Pizza,4,12.99,51.96,2024-02-10 10:32:00,,Cancelled,Apple Pay,"852 Hickory Rd, Los Angeles",,
+1030,Carol White,carol@email.com,555-1003,Sushi Stop,Chicago,Salmon Roll,Sushi,1,8.5,8.5,2024-04-13 11:56:00,,Pending,Debit Card,"789 Elm St, Chicago",,
+1031,Sam Walker,sam@email.com,555-1019,Taco Town,Houston,Quesadilla,Mexican,1,7.49,7.49,2024-04-17 20:37:00,,Cancelled,Credit Card,"807 Spruce Lane, Houston",,
+1032,Sam Walker,sam@email.com,555-1019,BBQ Brothers,Dallas,BBQ Chicken Wings,BBQ,3,13.99,41.97,2024-03-21 13:16:00,2024-03-21 14:06:00,Delivered,Google Pay,"807 Spruce Lane, Houston",Tyler Johnson,5
+1033,Jack Anderson,jack@email.com,555-1010,Veggie Delight,Austin,Avocado Toast,Healthy,1,8.99,8.99,2024-06-08 19:06:00,2024-06-08 19:35:00,Delivered,PayPal,"741 Ash Blvd, New York",Natalie Chen,4
+1034,Iris Taylor,iris@email.com,555-1009,Sushi Stop,Chicago,California Roll,Sushi,1,7.5,7.5,2024-03-13 12:28:00,2024-03-13 13:27:00,Delivered,Cash,"369 Spruce St, Seattle",Kevin Park,4
+1035,Zoe Scott,zoe@email.com,555-1026,BBQ Brothers,Dallas,Pulled Pork Sandwich,BBQ,3,12.99,38.97,2024-02-04 14:07:00,,Pending,Credit Card,"679 Birch Court, San Francisco",,
+1036,Carlos Evans,carlos@email.com,555-1029,Burger Barn,Los Angeles,Mushroom Swiss Burger,Burger,2,10.99,21.98,2024-06-03 13:45:00,2024-06-03 14:31:00,Delivered,Cash,"902 Ash Lane, Dallas",Sara Lee,5
+1037,Bella Turner,bella@email.com,555-1028,Noodle House,Seattle,Fried Rice,Asian,4,9.99,39.96,2024-01-24 20:27:00,2024-01-24 21:09:00,Delivered,Credit Card,"891 Spruce Blvd, Austin",Amy Chen,3
+1038,Yara King,yara@email.com,555-1025,Sushi Stop,Chicago,California Roll,Sushi,2,7.5,15.0,2024-05-21 21:27:00,,Pending,PayPal,"568 Pine Ave, Miami",,
+1039,Rachel Lee,rachel@email.com,555-1018,Pizza Palace,New York,Pepperoni Pizza,Pizza,1,12.99,12.99,2024-05-19 10:53:00,,Pending,Debit Card,"699 Walnut Blvd, Chicago",,
+1040,Liam Jackson,liam@email.com,555-1012,Pasta Primo,Miami,Risotto,Italian,2,15.99,31.98,2024-01-11 14:23:00,2024-01-11 15:38:00,Delivered,Debit Card,"963 Poplar Ave, Seattle",Isabella Martinez,5
+1041,Grace Wilson,grace@email.com,555-1007,Taco Town,Houston,Chicken Tacos,Mexican,3,5.99,17.97,2024-06-07 21:09:00,,Cancelled,PayPal,"147 Birch Ln, Chicago",,
+1042,Diana Collins,diana@email.com,555-1030,Taco Town,Houston,Beef Burrito,Mexican,2,8.99,17.98,2024-02-15 21:59:00,2024-02-15 22:45:00,Delivered,Credit Card,"113 Cedar Park, Miami",Ryan Davis,5
+1043,Bella Turner,bella@email.com,555-1028,Taco Town,Houston,Veggie Tacos,Mexican,2,5.49,10.98,2024-04-07 10:54:00,,Pending,Credit Card,"891 Spruce Blvd, Austin",,
+1044,Paul Rodriguez,paul@email.com,555-1016,Taco Town,Houston,Beef Burrito,Mexican,4,8.99,35.96,2024-02-28 13:01:00,2024-02-28 14:08:00,Delivered,Cash,"483 Maple Court, Los Angeles",Lisa Park,4
+1045,Iris Taylor,iris@email.com,555-1009,Burger Barn,Los Angeles,Veggie Burger,Burger,3,8.99,26.97,2024-04-12 20:53:00,,Pending,Apple Pay,"369 Spruce St, Seattle",,
+1046,Rachel Lee,rachel@email.com,555-1018,Curry Corner,San Francisco,Butter Chicken,Indian,1,13.99,13.99,2024-05-28 14:02:00,2024-05-28 14:33:00,Delivered,Debit Card,"699 Walnut Blvd, Chicago",Alex Zhang,4
+1047,Xander Young,xander@email.com,555-1024,Curry Corner,San Francisco,Chicken Tikka Masala,Indian,1,14.49,14.49,2024-02-18 14:02:00,2024-02-18 15:12:00,Delivered,Apple Pay,"457 Maple St, Dallas",Sophie Brown,3
+1048,Diana Collins,diana@email.com,555-1030,BBQ Brothers,Dallas,Smoked Brisket,BBQ,3,17.99,53.97,2024-06-19 15:39:00,2024-06-19 16:24:00,Delivered,Credit Card,"113 Cedar Park, Miami",Marcus Davis,5
+1049,Xander Young,xander@email.com,555-1024,Noodle House,Seattle,Fried Rice,Asian,3,9.99,29.97,2024-03-24 16:44:00,,Pending,PayPal,"457 Maple St, Dallas",,
+1050,Jack Anderson,jack@email.com,555-1010,BBQ Brothers,Dallas,Smoked Brisket,BBQ,2,17.99,35.98,2024-04-07 20:47:00,2024-04-07 21:23:00,Delivered,Google Pay,"741 Ash Blvd, New York",Marcus Davis,5
+1051,Mia Harris,mia@email.com,555-1013,BBQ Brothers,Dallas,Pulled Pork Sandwich,BBQ,3,12.99,38.97,2024-04-20 22:37:00,2024-04-20 23:40:00,Delivered,Debit Card,"159 Elm Park, Chicago",Marcus Davis,4
+1052,Olivia Garcia,olivia@email.com,555-1015,Veggie Delight,Austin,Quinoa Salad,Healthy,4,9.99,39.96,2024-06-17 11:18:00,,Pending,Debit Card,"375 Pine Hill, New York",,
+1053,Quinn Lewis,quinn@email.com,555-1017,Pasta Primo,Miami,Penne Arrabbiata,Italian,1,11.99,11.99,2024-03-20 13:51:00,2024-03-20 14:28:00,Delivered,Google Pay,"591 Birch Road, Seattle",Isabella Martinez,3
+1054,Henry Moore,henry@email.com,555-1008,Veggie Delight,Austin,Lentil Soup,Healthy,1,7.99,7.99,2024-06-10 19:12:00,2024-06-10 20:22:00,Delivered,PayPal,"258 Walnut Ave, Houston",Natalie Chen,4
+1055,Mia Harris,mia@email.com,555-1013,Taco Town,Houston,Beef Burrito,Mexican,1,8.99,8.99,2024-02-26 12:51:00,2024-02-26 14:00:00,Delivered,PayPal,"159 Elm Park, Chicago",Maria Garcia,4
+1056,Rachel Lee,rachel@email.com,555-1018,Taco Town,Houston,Chicken Tacos,Mexican,4,5.99,23.96,2024-06-19 18:35:00,2024-06-19 19:38:00,Delivered,PayPal,"699 Walnut Blvd, Chicago",Ryan Davis,5
+1057,Carlos Evans,carlos@email.com,555-1029,Veggie Delight,Austin,Lentil Soup,Healthy,4,7.99,31.96,2024-02-10 21:55:00,,Cancelled,PayPal,"902 Ash Lane, Dallas",,
+1058,Paul Rodriguez,paul@email.com,555-1016,Veggie Delight,Austin,Avocado Toast,Healthy,2,8.99,17.98,2024-05-13 17:40:00,,Pending,Cash,"483 Maple Court, Los Angeles",,
+1059,Henry Moore,henry@email.com,555-1008,Noodle House,Seattle,Dumplings,Asian,1,8.99,8.99,2024-03-01 14:21:00,,Pending,Cash,"258 Walnut Ave, Houston",,
+1060,Karen Thomas,karen@email.com,555-1011,BBQ Brothers,Dallas,Pulled Pork Sandwich,BBQ,2,12.99,25.98,2024-04-08 21:09:00,2024-04-08 22:19:00,Delivered,Debit Card,"852 Hickory Rd, Los Angeles",Tyler Johnson,3
+1061,Noah Martin,noah@email.com,555-1014,Curry Corner,San Francisco,Dal Makhani,Indian,4,10.99,43.96,2024-02-22 16:24:00,2024-02-22 17:38:00,Delivered,Credit Card,"267 Oak Creek, Houston",Alex Zhang,5
+1062,Alice Johnson,alice@email.com,555-1001,Pasta Primo,Miami,Lasagna,Italian,4,14.99,59.96,2024-03-17 22:24:00,2024-03-17 23:15:00,Delivered,Cash,"123 Main St, New York",Chloe Anderson,5
+1063,Rachel Lee,rachel@email.com,555-1018,Pasta Primo,Miami,Fettuccine Alfredo,Italian,4,12.99,51.96,2024-04-21 17:01:00,2024-04-21 17:50:00,Delivered,Cash,"699 Walnut Blvd, Chicago",Ryan Thompson,5
+1064,Zoe Scott,zoe@email.com,555-1026,Grill Master,Phoenix,Grilled Salmon,Grill,4,19.99,79.96,2024-05-16 10:58:00,2024-05-16 11:48:00,Delivered,Apple Pay,"679 Birch Court, San Francisco",Carlos Diaz,5
+1065,Alice Johnson,alice@email.com,555-1001,Burger Barn,Los Angeles,Double Smash Burger,Burger,2,13.99,27.98,2024-01-13 14:24:00,2024-01-13 15:09:00,Delivered,Debit Card,"123 Main St, New York",Sara Lee,4
+1066,Karen Thomas,karen@email.com,555-1011,Grill Master,Phoenix,BBQ Ribs,Grill,4,21.99,87.96,2024-04-30 10:47:00,2024-04-30 11:46:00,Delivered,Credit Card,"852 Hickory Rd, Los Angeles",Jake Miller,5
+1067,Liam Jackson,liam@email.com,555-1012,Taco Town,Houston,Chicken Tacos,Mexican,1,5.99,5.99,2024-02-21 10:39:00,2024-02-21 11:13:00,Delivered,Debit Card,"963 Poplar Ave, Seattle",Lisa Park,3
+1068,Victor Adams,victor@email.com,555-1022,Burger Barn,Los Angeles,Mushroom Swiss Burger,Burger,2,10.99,21.98,2024-03-06 22:23:00,2024-03-06 22:58:00,Delivered,Google Pay,"235 Elm Drive, Phoenix",Nina Lopez,5
+1069,Xander Young,xander@email.com,555-1024,Burger Barn,Los Angeles,BBQ Bacon Burger,Burger,3,11.49,34.47,2024-01-07 14:36:00,2024-01-07 15:44:00,Delivered,Apple Pay,"457 Maple St, Dallas",James Kim,4
+1070,Wendy Brown,wendy@email.com,555-1023,Taco Town,Houston,Chicken Tacos,Mexican,2,5.99,11.98,2024-03-18 20:38:00,2024-03-18 21:10:00,Delivered,Google Pay,"346 Oak Blvd, Austin",Maria Garcia,5
+1071,Liam Jackson,liam@email.com,555-1012,BBQ Brothers,Dallas,Loaded Fries,BBQ,3,8.99,26.97,2024-06-14 15:00:00,2024-06-14 15:51:00,Delivered,Apple Pay,"963 Poplar Ave, Seattle",Samantha Brown,3
+1072,Liam Jackson,liam@email.com,555-1012,Veggie Delight,Austin,Quinoa Salad,Healthy,4,9.99,39.96,2024-05-13 20:17:00,2024-05-13 21:21:00,Delivered,Google Pay,"963 Poplar Ave, Seattle",Natalie Chen,5
+1073,Olivia Garcia,olivia@email.com,555-1015,Grill Master,Phoenix,Lamb Chops,Grill,3,22.99,68.97,2024-01-23 14:56:00,2024-01-23 15:49:00,Delivered,Debit Card,"375 Pine Hill, New York",Jake Miller,5
+1074,Sam Walker,sam@email.com,555-1019,Pasta Primo,Miami,Lasagna,Italian,3,14.99,44.97,2024-03-24 12:31:00,2024-03-24 13:09:00,Delivered,PayPal,"807 Spruce Lane, Houston",Ryan Thompson,5
+1075,Karen Thomas,karen@email.com,555-1011,Noodle House,Seattle,Fried Rice,Asian,3,9.99,29.97,2024-05-12 13:05:00,,Cancelled,Credit Card,"852 Hickory Rd, Los Angeles",,
+1076,Henry Moore,henry@email.com,555-1008,Grill Master,Phoenix,Grilled Chicken,Grill,2,14.99,29.98,2024-06-14 21:31:00,,Pending,PayPal,"258 Walnut Ave, Houston",,
+1077,Olivia Garcia,olivia@email.com,555-1015,Pizza Palace,New York,Pepperoni Pizza,Pizza,3,12.99,38.97,2024-06-26 13:19:00,2024-06-26 14:26:00,Delivered,PayPal,"375 Pine Hill, New York",John Wu,4
+1078,Rachel Lee,rachel@email.com,555-1018,BBQ Brothers,Dallas,BBQ Chicken Wings,BBQ,4,13.99,55.96,2024-03-25 15:44:00,,Pending,Apple Pay,"699 Walnut Blvd, Chicago",,
+1079,Olivia Garcia,olivia@email.com,555-1015,Noodle House,Seattle,Pho,Asian,3,11.99,35.97,2024-02-19 15:07:00,2024-02-19 16:19:00,Delivered,Credit Card,"375 Pine Hill, New York",Priya Kumar,5
+1080,Wendy Brown,wendy@email.com,555-1023,Sushi Stop,Chicago,Tuna Sashimi,Sushi,2,14.0,28.0,2024-03-11 21:37:00,,Pending,PayPal,"346 Oak Blvd, Austin",,
+1081,Yara King,yara@email.com,555-1025,BBQ Brothers,Dallas,Coleslaw Plate,BBQ,3,6.99,20.97,2024-03-16 13:23:00,2024-03-16 13:59:00,Delivered,Debit Card,"568 Pine Ave, Miami",Samantha Brown,3
+1082,Rachel Lee,rachel@email.com,555-1018,Sushi Stop,Chicago,California Roll,Sushi,1,7.5,7.5,2024-03-15 21:08:00,2024-03-15 22:13:00,Delivered,Apple Pay,"699 Walnut Blvd, Chicago",Amy Chen,3
+1083,Alice Johnson,alice@email.com,555-1001,Pasta Primo,Miami,Penne Arrabbiata,Italian,4,11.99,47.96,2024-03-28 12:03:00,2024-03-28 12:44:00,Delivered,PayPal,"123 Main St, New York",Ryan Thompson,3
+1084,Carol White,carol@email.com,555-1003,Grill Master,Phoenix,Grilled Chicken,Grill,1,14.99,14.99,2024-06-24 10:09:00,,Cancelled,Google Pay,"789 Elm St, Chicago",,
+1085,Emma Davis,emma@email.com,555-1005,Pasta Primo,Miami,Penne Arrabbiata,Italian,1,11.99,11.99,2024-05-22 22:26:00,2024-05-22 23:29:00,Delivered,Credit Card,"654 Cedar Blvd, Houston",Chloe Anderson,5
+1086,Henry Moore,henry@email.com,555-1008,BBQ Brothers,Dallas,Loaded Fries,BBQ,4,8.99,35.96,2024-05-30 16:19:00,2024-05-30 17:20:00,Delivered,Cash,"258 Walnut Ave, Houston",Marcus Davis,3
+1087,Xander Young,xander@email.com,555-1024,Burger Barn,Los Angeles,BBQ Bacon Burger,Burger,2,11.49,22.98,2024-01-21 12:15:00,2024-01-21 12:51:00,Delivered,Google Pay,"457 Maple St, Dallas",Nina Lopez,3
+1088,Alice Johnson,alice@email.com,555-1001,Grill Master,Phoenix,Grilled Chicken,Grill,4,14.99,59.96,2024-02-29 14:45:00,2024-02-29 15:28:00,Delivered,Credit Card,"123 Main St, New York",Carlos Diaz,5
+1089,Carol White,carol@email.com,555-1003,Taco Town,Houston,Veggie Tacos,Mexican,2,5.49,10.98,2024-05-19 13:41:00,2024-05-19 14:15:00,Delivered,Credit Card,"789 Elm St, Chicago",Ryan Davis,5
+1090,Carol White,carol@email.com,555-1003,Pizza Palace,New York,Margherita Pizza,Pizza,3,11.99,35.97,2024-05-25 14:28:00,,Cancelled,Google Pay,"789 Elm St, Chicago",,
+1091,David Lee,david@email.com,555-1004,Veggie Delight,Austin,Avocado Toast,Healthy,4,8.99,35.96,2024-05-18 17:28:00,2024-05-18 17:58:00,Delivered,Apple Pay,"321 Pine Rd, New York",Natalie Chen,3
+1092,Noah Martin,noah@email.com,555-1014,Curry Corner,San Francisco,Dal Makhani,Indian,3,10.99,32.97,2024-02-28 20:53:00,2024-02-28 21:54:00,Delivered,Credit Card,"267 Oak Creek, Houston",Alex Zhang,5
+1093,Yara King,yara@email.com,555-1025,Noodle House,Seattle,Fried Rice,Asian,1,9.99,9.99,2024-05-12 20:28:00,2024-05-12 21:10:00,Delivered,PayPal,"568 Pine Ave, Miami",Amy Chen,5
+1094,Noah Martin,noah@email.com,555-1014,Veggie Delight,Austin,Buddha Bowl,Healthy,4,11.99,47.96,2024-03-26 15:42:00,2024-03-26 16:13:00,Delivered,PayPal,"267 Oak Creek, Houston",Emma Wilson,4
+1095,Wendy Brown,wendy@email.com,555-1023,Veggie Delight,Austin,Avocado Toast,Healthy,4,8.99,35.96,2024-04-26 11:20:00,,Cancelled,Credit Card,"346 Oak Blvd, Austin",,
+1096,Iris Taylor,iris@email.com,555-1009,Curry Corner,San Francisco,Butter Chicken,Indian,4,13.99,55.96,2024-06-17 18:29:00,,Cancelled,Credit Card,"369 Spruce St, Seattle",,
+1097,Noah Martin,noah@email.com,555-1014,Pizza Palace,New York,Margherita Pizza,Pizza,3,11.99,35.97,2024-06-09 17:48:00,,Cancelled,PayPal,"267 Oak Creek, Houston",,
+1098,Bob Smith,bob@email.com,555-1002,Taco Town,Houston,Veggie Tacos,Mexican,2,5.49,10.98,2024-06-27 17:07:00,2024-06-27 17:33:00,Delivered,PayPal,"456 Oak Ave, Los Angeles",Maria Garcia,5
+1099,Henry Moore,henry@email.com,555-1008,Sushi Stop,Chicago,California Roll,Sushi,1,7.5,7.5,2024-01-24 13:53:00,,Cancelled,PayPal,"258 Walnut Ave, Houston",,
+1100,Diana Collins,diana@email.com,555-1030,Burger Barn,Los Angeles,Double Smash Burger,Burger,1,13.99,13.99,2024-05-07 21:18:00,,Pending,Debit Card,"113 Cedar Park, Miami",,
+1101,Quinn Lewis,quinn@email.com,555-1017,Noodle House,Seattle,Dumplings,Asian,4,8.99,35.96,2024-04-26 18:09:00,2024-04-26 18:58:00,Delivered,Debit Card,"591 Birch Road, Seattle",Amy Chen,5
+1102,Quinn Lewis,quinn@email.com,555-1017,Sushi Stop,Chicago,Salmon Roll,Sushi,3,8.5,25.5,2024-05-09 14:52:00,2024-05-09 15:17:00,Delivered,Cash,"591 Birch Road, Seattle",Amy Chen,5
+1103,Aaron Hill,aaron@email.com,555-1027,Pasta Primo,Miami,Risotto,Italian,4,15.99,63.96,2024-05-17 17:22:00,2024-05-17 18:08:00,Delivered,PayPal,"780 Walnut Rd, Phoenix",Chloe Anderson,5
+1104,Mia Harris,mia@email.com,555-1013,Veggie Delight,Austin,Avocado Toast,Healthy,2,8.99,17.98,2024-05-26 16:14:00,,Pending,Debit Card,"159 Elm Park, Chicago",,
+1105,Bella Turner,bella@email.com,555-1028,Grill Master,Phoenix,Ribeye Steak,Grill,3,24.99,74.97,2024-04-07 16:42:00,,Pending,PayPal,"891 Spruce Blvd, Austin",,
+1106,Zoe Scott,zoe@email.com,555-1026,Sushi Stop,Chicago,Dragon Roll,Sushi,1,13.0,13.0,2024-05-31 15:55:00,2024-05-31 16:26:00,Delivered,Apple Pay,"679 Birch Court, San Francisco",Amy Chen,3
+1107,Diana Collins,diana@email.com,555-1030,Veggie Delight,Austin,Buddha Bowl,Healthy,2,11.99,23.98,2024-02-09 11:30:00,2024-02-09 12:45:00,Delivered,Google Pay,"113 Cedar Park, Miami",Brandon Lee,4
+1108,Wendy Brown,wendy@email.com,555-1023,Grill Master,Phoenix,Ribeye Steak,Grill,3,24.99,74.97,2024-04-07 15:40:00,,Pending,Apple Pay,"346 Oak Blvd, Austin",,
+1109,Wendy Brown,wendy@email.com,555-1023,Veggie Delight,Austin,Lentil Soup,Healthy,1,7.99,7.99,2024-03-01 20:43:00,,Cancelled,Credit Card,"346 Oak Blvd, Austin",,
+1110,Diana Collins,diana@email.com,555-1030,Noodle House,Seattle,Ramen,Asian,1,12.5,12.5,2024-06-11 21:55:00,2024-06-11 22:26:00,Delivered,Credit Card,"113 Cedar Park, Miami",Chris Johnson,3
+1111,Jack Anderson,jack@email.com,555-1010,Pizza Palace,New York,Pepperoni Pizza,Pizza,3,12.99,38.97,2024-04-01 15:27:00,2024-04-01 16:01:00,Delivered,Cash,"741 Ash Blvd, New York",Mike Ross,5
+1112,Sam Walker,sam@email.com,555-1019,Sushi Stop,Chicago,Tuna Sashimi,Sushi,2,14.0,28.0,2024-04-07 19:43:00,2024-04-07 20:23:00,Delivered,Apple Pay,"807 Spruce Lane, Houston",Amy Chen,5
+1113,Emma Davis,emma@email.com,555-1005,Taco Town,Houston,Nachos,Mexican,3,6.99,20.97,2024-06-19 10:57:00,2024-06-19 11:51:00,Delivered,Cash,"654 Cedar Blvd, Houston",Ryan Davis,5
+1114,Frank Miller,frank@email.com,555-1006,Burger Barn,Los Angeles,Double Smash Burger,Burger,3,13.99,41.97,2024-06-12 16:44:00,,Cancelled,Cash,"987 Maple Dr, Los Angeles",,
+1115,Iris Taylor,iris@email.com,555-1009,Veggie Delight,Austin,Avocado Toast,Healthy,2,8.99,17.98,2024-01-28 13:24:00,2024-01-28 14:25:00,Delivered,PayPal,"369 Spruce St, Seattle",Brandon Lee,5
+1116,Wendy Brown,wendy@email.com,555-1023,Noodle House,Seattle,Pad Thai,Asian,4,10.99,43.96,2024-05-24 20:49:00,2024-05-24 22:01:00,Delivered,Credit Card,"346 Oak Blvd, Austin",Amy Chen,5
+1117,Xander Young,xander@email.com,555-1024,Veggie Delight,Austin,Avocado Toast,Healthy,2,8.99,17.98,2024-02-26 20:12:00,,Cancelled,Cash,"457 Maple St, Dallas",,
+1118,Tina Hall,tina@email.com,555-1020,Noodle House,Seattle,Ramen,Asian,1,12.5,12.5,2024-01-11 14:50:00,,Pending,Google Pay,"915 Ash Street, New York",,
+1119,Olivia Garcia,olivia@email.com,555-1015,Pizza Palace,New York,Four Cheese Pizza,Pizza,3,14.99,44.97,2024-01-24 14:20:00,,Pending,Debit Card,"375 Pine Hill, New York",,
+1120,Xander Young,xander@email.com,555-1024,Grill Master,Phoenix,Grilled Salmon,Grill,2,19.99,39.98,2024-04-03 18:32:00,2024-04-03 19:14:00,Delivered,Apple Pay,"457 Maple St, Dallas",Jake Miller,4
+1121,Aaron Hill,aaron@email.com,555-1027,Veggie Delight,Austin,Avocado Toast,Healthy,3,8.99,26.97,2024-01-20 12:48:00,2024-01-20 13:27:00,Delivered,PayPal,"780 Walnut Rd, Phoenix",Natalie Chen,5
+1122,Mia Harris,mia@email.com,555-1013,BBQ Brothers,Dallas,BBQ Chicken Wings,BBQ,1,13.99,13.99,2024-03-08 18:07:00,2024-03-08 19:01:00,Delivered,Credit Card,"159 Elm Park, Chicago",Samantha Brown,5
+1123,Victor Adams,victor@email.com,555-1022,Noodle House,Seattle,Fried Rice,Asian,4,9.99,39.96,2024-01-28 20:14:00,,Pending,Cash,"235 Elm Drive, Phoenix",,
+1124,Paul Rodriguez,paul@email.com,555-1016,Pizza Palace,New York,Four Cheese Pizza,Pizza,3,14.99,44.97,2024-06-14 11:40:00,,Cancelled,Debit Card,"483 Maple Court, Los Angeles",,
+1125,Aaron Hill,aaron@email.com,555-1027,Veggie Delight,Austin,Avocado Toast,Healthy,4,8.99,35.96,2024-01-12 10:19:00,2024-01-12 11:15:00,Delivered,Debit Card,"780 Walnut Rd, Phoenix",Emma Wilson,3
+1126,Carlos Evans,carlos@email.com,555-1029,BBQ Brothers,Dallas,Smoked Brisket,BBQ,4,17.99,71.96,2024-06-20 21:44:00,2024-06-20 22:43:00,Delivered,Cash,"902 Ash Lane, Dallas",Samantha Brown,5
+1127,Xander Young,xander@email.com,555-1024,Sushi Stop,Chicago,Dragon Roll,Sushi,1,13.0,13.0,2024-04-14 14:02:00,2024-04-14 15:11:00,Delivered,Apple Pay,"457 Maple St, Dallas",Amy Chen,4
+1128,Olivia Garcia,olivia@email.com,555-1015,Taco Town,Houston,Veggie Tacos,Mexican,1,5.49,5.49,2024-05-19 20:22:00,,Pending,Cash,"375 Pine Hill, New York",,
+1129,Bob Smith,bob@email.com,555-1002,Grill Master,Phoenix,BBQ Ribs,Grill,2,21.99,43.98,2024-01-24 20:13:00,2024-01-24 21:19:00,Delivered,PayPal,"456 Oak Ave, Los Angeles",Carlos Diaz,5
+1130,Alice Johnson,alice@email.com,555-1001,Pizza Palace,New York,BBQ Chicken Pizza,Pizza,2,13.99,27.98,2024-02-22 11:53:00,2024-02-22 13:06:00,Delivered,Apple Pay,"123 Main St, New York",John Wu,4
+1131,Grace Wilson,grace@email.com,555-1007,Taco Town,Houston,Veggie Tacos,Mexican,2,5.49,10.98,2024-03-11 12:08:00,,Cancelled,Credit Card,"147 Birch Ln, Chicago",,
+1132,Rachel Lee,rachel@email.com,555-1018,Noodle House,Seattle,Ramen,Asian,1,12.5,12.5,2024-02-03 10:22:00,,Pending,Credit Card,"699 Walnut Blvd, Chicago",,
+1133,Zoe Scott,zoe@email.com,555-1026,Taco Town,Houston,Quesadilla,Mexican,3,7.49,22.47,2024-03-08 10:08:00,2024-03-08 11:20:00,Delivered,Debit Card,"679 Birch Court, San Francisco",Ryan Davis,5
+1134,Xander Young,xander@email.com,555-1024,Burger Barn,Los Angeles,Double Smash Burger,Burger,4,13.99,55.96,2024-05-31 11:28:00,2024-05-31 12:25:00,Delivered,Apple Pay,"457 Maple St, Dallas",Sara Lee,5
+1135,Bob Smith,bob@email.com,555-1002,BBQ Brothers,Dallas,BBQ Chicken Wings,BBQ,4,13.99,55.96,2024-01-16 17:54:00,,Pending,Credit Card,"456 Oak Ave, Los Angeles",,
+1136,Mia Harris,mia@email.com,555-1013,Grill Master,Phoenix,Ribeye Steak,Grill,4,24.99,99.96,2024-01-19 11:20:00,,Pending,PayPal,"159 Elm Park, Chicago",,
+1137,Tina Hall,tina@email.com,555-1020,Sushi Stop,Chicago,Salmon Roll,Sushi,2,8.5,17.0,2024-06-11 19:35:00,2024-06-11 20:45:00,Delivered,Apple Pay,"915 Ash Street, New York",Amy Chen,4
+1138,Tina Hall,tina@email.com,555-1020,BBQ Brothers,Dallas,BBQ Chicken Wings,BBQ,4,13.99,55.96,2024-04-20 11:50:00,,Cancelled,Apple Pay,"915 Ash Street, New York",,
+1139,Wendy Brown,wendy@email.com,555-1023,Burger Barn,Los Angeles,Mushroom Swiss Burger,Burger,2,10.99,21.98,2024-02-28 16:21:00,2024-02-28 17:15:00,Delivered,PayPal,"346 Oak Blvd, Austin",James Kim,4
+1140,David Lee,david@email.com,555-1004,Curry Corner,San Francisco,Chicken Tikka Masala,Indian,3,14.49,43.47,2024-04-05 12:43:00,,Pending,Cash,"321 Pine Rd, New York",,
+1141,Diana Collins,diana@email.com,555-1030,Veggie Delight,Austin,Buddha Bowl,Healthy,1,11.99,11.99,2024-04-20 11:47:00,2024-04-20 12:59:00,Delivered,Credit Card,"113 Cedar Park, Miami",Brandon Lee,5
+1142,Rachel Lee,rachel@email.com,555-1018,Pizza Palace,New York,Four Cheese Pizza,Pizza,3,14.99,44.97,2024-04-15 15:55:00,,Pending,Credit Card,"699 Walnut Blvd, Chicago",,
+1143,Victor Adams,victor@email.com,555-1022,Grill Master,Phoenix,Ribeye Steak,Grill,3,24.99,74.97,2024-03-31 11:36:00,,Cancelled,Cash,"235 Elm Drive, Phoenix",,
+1144,Quinn Lewis,quinn@email.com,555-1017,Taco Town,Houston,Beef Burrito,Mexican,4,8.99,35.96,2024-03-30 18:23:00,2024-03-30 18:55:00,Delivered,Credit Card,"591 Birch Road, Seattle",Ryan Davis,5
+1145,Zoe Scott,zoe@email.com,555-1026,Grill Master,Phoenix,Lamb Chops,Grill,1,22.99,22.99,2024-06-26 14:01:00,,Cancelled,Google Pay,"679 Birch Court, San Francisco",,
+1146,Frank Miller,frank@email.com,555-1006,Noodle House,Seattle,Pho,Asian,3,11.99,35.97,2024-02-16 12:36:00,2024-02-16 13:43:00,Delivered,Credit Card,"987 Maple Dr, Los Angeles",Chris Johnson,3
+1147,Xander Young,xander@email.com,555-1024,Pizza Palace,New York,Pepperoni Pizza,Pizza,2,12.99,25.98,2024-04-26 15:10:00,2024-04-26 15:58:00,Delivered,PayPal,"457 Maple St, Dallas",Sara Patel,5
+1148,Yara King,yara@email.com,555-1025,Pasta Primo,Miami,Risotto,Italian,1,15.99,15.99,2024-02-10 22:39:00,2024-02-10 23:07:00,Delivered,Debit Card,"568 Pine Ave, Miami",Chloe Anderson,3
+1149,Olivia Garcia,olivia@email.com,555-1015,Grill Master,Phoenix,Grilled Chicken,Grill,4,14.99,59.96,2024-02-25 22:32:00,2024-02-25 23:04:00,Delivered,Cash,"375 Pine Hill, New York",Rebecca Jones,4
+1150,Jack Anderson,jack@email.com,555-1010,Pasta Primo,Miami,Lasagna,Italian,3,14.99,44.97,2024-04-11 19:03:00,2024-04-11 19:28:00,Delivered,Debit Card,"741 Ash Blvd, New York",Isabella Martinez,4
+1151,Grace Wilson,grace@email.com,555-1007,Sushi Stop,Chicago,California Roll,Sushi,3,7.5,22.5,2024-01-02 17:47:00,2024-01-02 18:39:00,Delivered,Credit Card,"147 Birch Ln, Chicago",Tom Brown,3
+1152,Rachel Lee,rachel@email.com,555-1018,Taco Town,Houston,Quesadilla,Mexican,3,7.49,22.47,2024-01-11 16:01:00,2024-01-11 16:55:00,Delivered,PayPal,"699 Walnut Blvd, Chicago",Lisa Park,5
+1153,Sam Walker,sam@email.com,555-1019,Grill Master,Phoenix,Lamb Chops,Grill,4,22.99,91.96,2024-04-16 14:07:00,,Pending,Google Pay,"807 Spruce Lane, Houston",,
+1154,Mia Harris,mia@email.com,555-1013,Pizza Palace,New York,BBQ Chicken Pizza,Pizza,2,13.99,27.98,2024-06-25 15:05:00,,Cancelled,PayPal,"159 Elm Park, Chicago",,
+1155,Noah Martin,noah@email.com,555-1014,Burger Barn,Los Angeles,BBQ Bacon Burger,Burger,4,11.49,45.96,2024-05-14 11:25:00,,Cancelled,PayPal,"267 Oak Creek, Houston",,
+1156,Bella Turner,bella@email.com,555-1028,Noodle House,Seattle,Pho,Asian,2,11.99,23.98,2024-01-20 18:40:00,2024-01-20 19:12:00,Delivered,Debit Card,"891 Spruce Blvd, Austin",Priya Kumar,5
+1157,Carlos Evans,carlos@email.com,555-1029,Curry Corner,San Francisco,Palak Paneer,Indian,2,11.99,23.98,2024-02-07 14:12:00,2024-02-07 14:48:00,Delivered,Credit Card,"902 Ash Lane, Dallas",Alex Zhang,3
+1158,Yara King,yara@email.com,555-1025,Burger Barn,Los Angeles,BBQ Bacon Burger,Burger,4,11.49,45.96,2024-05-28 17:43:00,2024-05-28 18:44:00,Delivered,Apple Pay,"568 Pine Ave, Miami",Nina Lopez,5
+1159,Tina Hall,tina@email.com,555-1020,Curry Corner,San Francisco,Palak Paneer,Indian,2,11.99,23.98,2024-04-30 17:40:00,2024-04-30 18:24:00,Delivered,Credit Card,"915 Ash Street, New York",Sophie Brown,5
+1160,Liam Jackson,liam@email.com,555-1012,BBQ Brothers,Dallas,Pulled Pork Sandwich,BBQ,3,12.99,38.97,2024-01-10 10:23:00,2024-01-10 11:06:00,Delivered,PayPal,"963 Poplar Ave, Seattle",Tyler Johnson,5
+1161,Bella Turner,bella@email.com,555-1028,Burger Barn,Los Angeles,Mushroom Swiss Burger,Burger,4,10.99,43.96,2024-05-21 22:47:00,2024-05-21 23:14:00,Delivered,Apple Pay,"891 Spruce Blvd, Austin",James Kim,5
+1162,Sam Walker,sam@email.com,555-1019,Taco Town,Houston,Veggie Tacos,Mexican,4,5.49,21.96,2024-01-16 17:06:00,,Cancelled,Debit Card,"807 Spruce Lane, Houston",,
+1163,Zoe Scott,zoe@email.com,555-1026,Curry Corner,San Francisco,Butter Chicken,Indian,2,13.99,27.98,2024-04-22 17:33:00,2024-04-22 18:31:00,Delivered,Debit Card,"679 Birch Court, San Francisco",Alex Zhang,3
+1164,Liam Jackson,liam@email.com,555-1012,Noodle House,Seattle,Dumplings,Asian,4,8.99,35.96,2024-06-02 10:50:00,2024-06-02 11:55:00,Delivered,Google Pay,"963 Poplar Ave, Seattle",Priya Kumar,4
+1165,Karen Thomas,karen@email.com,555-1011,Burger Barn,Los Angeles,Mushroom Swiss Burger,Burger,4,10.99,43.96,2024-06-17 19:55:00,2024-06-17 20:29:00,Delivered,Cash,"852 Hickory Rd, Los Angeles",James Kim,3
+1166,Victor Adams,victor@email.com,555-1022,Sushi Stop,Chicago,California Roll,Sushi,3,7.5,22.5,2024-06-18 16:08:00,,Pending,Google Pay,"235 Elm Drive, Phoenix",,
+1167,Tina Hall,tina@email.com,555-1020,Burger Barn,Los Angeles,Veggie Burger,Burger,4,8.99,35.96,2024-02-02 20:44:00,,Pending,Cash,"915 Ash Street, New York",,
+1168,Aaron Hill,aaron@email.com,555-1027,BBQ Brothers,Dallas,Pulled Pork Sandwich,BBQ,4,12.99,51.96,2024-01-05 15:19:00,,Cancelled,Cash,"780 Walnut Rd, Phoenix",,
+1169,Frank Miller,frank@email.com,555-1006,Taco Town,Houston,Veggie Tacos,Mexican,4,5.49,21.96,2024-02-05 12:04:00,2024-02-05 12:47:00,Delivered,Debit Card,"987 Maple Dr, Los Angeles",Lisa Park,5
+1170,Rachel Lee,rachel@email.com,555-1018,BBQ Brothers,Dallas,Pulled Pork Sandwich,BBQ,3,12.99,38.97,2024-06-01 16:09:00,,Cancelled,Debit Card,"699 Walnut Blvd, Chicago",,
+1171,Frank Miller,frank@email.com,555-1006,Sushi Stop,Chicago,Spicy Tuna Roll,Sushi,2,9.5,19.0,2024-01-12 16:23:00,,Pending,PayPal,"987 Maple Dr, Los Angeles",,
+1172,Victor Adams,victor@email.com,555-1022,Taco Town,Houston,Nachos,Mexican,3,6.99,20.97,2024-02-29 18:15:00,,Pending,PayPal,"235 Elm Drive, Phoenix",,
+1173,Jack Anderson,jack@email.com,555-1010,Veggie Delight,Austin,Quinoa Salad,Healthy,3,9.99,29.97,2024-04-22 17:49:00,,Pending,Apple Pay,"741 Ash Blvd, New York",,
+1174,Jack Anderson,jack@email.com,555-1010,Grill Master,Phoenix,Lamb Chops,Grill,4,22.99,91.96,2024-06-03 12:55:00,2024-06-03 13:36:00,Delivered,Debit Card,"741 Ash Blvd, New York",Jake Miller,5
+1175,Bella Turner,bella@email.com,555-1028,Curry Corner,San Francisco,Dal Makhani,Indian,1,10.99,10.99,2024-02-01 14:05:00,,Pending,Apple Pay,"891 Spruce Blvd, Austin",,
+1176,Yara King,yara@email.com,555-1025,Sushi Stop,Chicago,California Roll,Sushi,4,7.5,30.0,2024-04-21 11:58:00,,Cancelled,Debit Card,"568 Pine Ave, Miami",,
+1177,Henry Moore,henry@email.com,555-1008,Veggie Delight,Austin,Avocado Toast,Healthy,1,8.99,8.99,2024-04-11 18:23:00,2024-04-11 19:03:00,Delivered,Credit Card,"258 Walnut Ave, Houston",Brandon Lee,5
+1178,Liam Jackson,liam@email.com,555-1012,Taco Town,Houston,Chicken Tacos,Mexican,3,5.99,17.97,2024-06-15 15:50:00,2024-06-15 16:24:00,Delivered,Google Pay,"963 Poplar Ave, Seattle",Lisa Park,3
+1179,Diana Collins,diana@email.com,555-1030,Veggie Delight,Austin,Quinoa Salad,Healthy,4,9.99,39.96,2024-01-02 11:01:00,2024-01-02 11:42:00,Delivered,Apple Pay,"113 Cedar Park, Miami",Emma Wilson,5
+1180,Rachel Lee,rachel@email.com,555-1018,Pasta Primo,Miami,Risotto,Italian,4,15.99,63.96,2024-03-01 14:07:00,2024-03-01 14:35:00,Delivered,Cash,"699 Walnut Blvd, Chicago",Isabella Martinez,4
+1181,Zoe Scott,zoe@email.com,555-1026,Pasta Primo,Miami,Lasagna,Italian,1,14.99,14.99,2024-06-01 18:01:00,2024-06-01 19:06:00,Delivered,PayPal,"679 Birch Court, San Francisco",Chloe Anderson,5
+1182,Wendy Brown,wendy@email.com,555-1023,Sushi Stop,Chicago,California Roll,Sushi,4,7.5,30.0,2024-03-31 13:36:00,2024-03-31 14:27:00,Delivered,Apple Pay,"346 Oak Blvd, Austin",Tom Brown,5
+1183,Carol White,carol@email.com,555-1003,BBQ Brothers,Dallas,BBQ Chicken Wings,BBQ,1,13.99,13.99,2024-05-09 22:32:00,,Cancelled,Apple Pay,"789 Elm St, Chicago",,
+1184,Rachel Lee,rachel@email.com,555-1018,Pizza Palace,New York,Vegetarian Pizza,Pizza,4,12.49,49.96,2024-04-09 15:16:00,2024-04-09 16:28:00,Delivered,Google Pay,"699 Walnut Blvd, Chicago",Mike Ross,4
+1185,Carol White,carol@email.com,555-1003,Curry Corner,San Francisco,Lamb Biryani,Indian,1,15.99,15.99,2024-03-26 12:02:00,,Cancelled,Google Pay,"789 Elm St, Chicago",,
+1186,Liam Jackson,liam@email.com,555-1012,BBQ Brothers,Dallas,BBQ Chicken Wings,BBQ,2,13.99,27.98,2024-06-27 17:40:00,,Pending,PayPal,"963 Poplar Ave, Seattle",,
+1187,Frank Miller,frank@email.com,555-1006,Sushi Stop,Chicago,Salmon Roll,Sushi,4,8.5,34.0,2024-02-21 10:50:00,2024-02-21 11:27:00,Delivered,Cash,"987 Maple Dr, Los Angeles",Tom Brown,4
+1188,Jack Anderson,jack@email.com,555-1010,BBQ Brothers,Dallas,Loaded Fries,BBQ,4,8.99,35.96,2024-06-14 13:18:00,2024-06-14 14:05:00,Delivered,Credit Card,"741 Ash Blvd, New York",Tyler Johnson,5
+1189,Karen Thomas,karen@email.com,555-1011,Noodle House,Seattle,Pad Thai,Asian,3,10.99,32.97,2024-04-22 16:21:00,2024-04-22 16:57:00,Delivered,PayPal,"852 Hickory Rd, Los Angeles",Chris Johnson,5
+1190,Liam Jackson,liam@email.com,555-1012,BBQ Brothers,Dallas,BBQ Chicken Wings,BBQ,1,13.99,13.99,2024-01-21 16:38:00,,Pending,PayPal,"963 Poplar Ave, Seattle",,
+1191,Aaron Hill,aaron@email.com,555-1027,Sushi Stop,Chicago,Spicy Tuna Roll,Sushi,3,9.5,28.5,2024-01-21 15:42:00,2024-01-21 16:25:00,Delivered,Credit Card,"780 Walnut Rd, Phoenix",Amy Chen,4
+1192,Wendy Brown,wendy@email.com,555-1023,Grill Master,Phoenix,Grilled Salmon,Grill,4,19.99,79.96,2024-01-11 21:55:00,2024-01-11 22:42:00,Delivered,PayPal,"346 Oak Blvd, Austin",Carlos Diaz,5
+1193,Iris Taylor,iris@email.com,555-1009,Pizza Palace,New York,Pepperoni Pizza,Pizza,4,12.99,51.96,2024-06-22 12:01:00,2024-06-22 12:35:00,Delivered,Apple Pay,"369 Spruce St, Seattle",John Wu,5
+1194,Olivia Garcia,olivia@email.com,555-1015,Pizza Palace,New York,Margherita Pizza,Pizza,1,11.99,11.99,2024-04-03 15:24:00,2024-04-03 16:25:00,Delivered,Google Pay,"375 Pine Hill, New York",Mike Ross,5
+1195,Victor Adams,victor@email.com,555-1022,Veggie Delight,Austin,Avocado Toast,Healthy,3,8.99,26.97,2024-05-26 12:33:00,2024-05-26 13:21:00,Delivered,Credit Card,"235 Elm Drive, Phoenix",Brandon Lee,4
+1196,Iris Taylor,iris@email.com,555-1009,Taco Town,Houston,Chicken Tacos,Mexican,1,5.99,5.99,2024-05-07 18:24:00,,Pending,Debit Card,"369 Spruce St, Seattle",,
+1197,Diana Collins,diana@email.com,555-1030,BBQ Brothers,Dallas,Pulled Pork Sandwich,BBQ,3,12.99,38.97,2024-04-24 13:39:00,2024-04-24 14:22:00,Delivered,Google Pay,"113 Cedar Park, Miami",Marcus Davis,5
+1198,Paul Rodriguez,paul@email.com,555-1016,Taco Town,Houston,Chicken Tacos,Mexican,2,5.99,11.98,2024-02-14 21:28:00,2024-02-14 21:58:00,Delivered,PayPal,"483 Maple Court, Los Angeles",Maria Garcia,5
+1199,Karen Thomas,karen@email.com,555-1011,Curry Corner,San Francisco,Butter Chicken,Indian,3,13.99,41.97,2024-06-28 20:11:00,2024-06-28 21:26:00,Delivered,Debit Card,"852 Hickory Rd, Los Angeles",Sophie Brown,5
+1200,David Lee,david@email.com,555-1004,Taco Town,Houston,Beef Burrito,Mexican,2,8.99,17.98,2024-04-02 18:36:00,2024-04-02 19:24:00,Delivered,Credit Card,"321 Pine Rd, New York",Ryan Davis,5

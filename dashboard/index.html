@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Order Analytics Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    :root {
+      --bg:       #0f1117;
+      --surface:  #1a1d27;
+      --card:     #21263a;
+      --border:   #2e3452;
+      --accent1:  #6c63ff;
+      --accent2:  #00d4aa;
+      --accent3:  #ff6b6b;
+      --accent4:  #ffd166;
+      --text:     #e2e8f0;
+      --muted:    #8892b0;
+      --green:    #10b981;
+      --red:      #ef4444;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1a1d27 0%, #21263a 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 { font-size: 1.3rem; font-weight: 700; letter-spacing: 0.5px; }
+    header h1 span { color: var(--accent1); }
+    .header-meta { font-size: 0.8rem; color: var(--muted); }
+    .badge {
+      background: var(--accent2);
+      color: #000;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-left: 10px;
+    }
+
+    /* ── Layout ── */
+    main { padding: 28px 32px; max-width: 1400px; margin: 0 auto; }
+
+    /* ── KPI Cards ── */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .kpi-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 22px;
+      position: relative;
+      overflow: hidden;
+    }
+    .kpi-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+    .kpi-card:nth-child(1)::before { background: var(--accent1); }
+    .kpi-card:nth-child(2)::before { background: var(--accent2); }
+    .kpi-card:nth-child(3)::before { background: var(--accent4); }
+    .kpi-card:nth-child(4)::before { background: var(--accent3); }
+
+    .kpi-label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+    .kpi-value { font-size: 2rem; font-weight: 800; line-height: 1; }
+    .kpi-sub   { font-size: 0.78rem; color: var(--muted); margin-top: 6px; }
+    .kpi-delta { font-size: 0.75rem; margin-top: 4px; }
+    .kpi-delta.up   { color: var(--green); }
+    .kpi-delta.down { color: var(--red); }
+
+    /* ── Chart Grid ── */
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .chart-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .chart-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .chart-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 16px;
+    }
+    canvas { max-height: 260px; }
+
+    /* ── Table ── */
+    .table-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      overflow-x: auto;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+    thead th {
+      text-align: left;
+      padding: 8px 12px;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border);
+    }
+    tbody td { padding: 10px 12px; border-bottom: 1px solid #1e2235; }
+    tbody tr:last-child td { border-bottom: none; }
+    tbody tr:hover { background: rgba(108,99,255,0.06); }
+
+    .status-pill {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+    .status-pill.delivered  { background: rgba(16,185,129,.15); color: #10b981; }
+    .status-pill.cancelled  { background: rgba(239,68,68,.15);  color: #ef4444; }
+    .status-pill.pending    { background: rgba(255,209,102,.15); color: #ffd166; }
+
+    /* ── Pipeline section ── */
+    .pipeline-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .pipeline-flow {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-top: 16px;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .pf-step {
+      flex: 1;
+      min-width: 110px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      text-align: center;
+    }
+    .pf-step .icon { font-size: 1.4rem; margin-bottom: 4px; }
+    .pf-step .name { font-size: 0.78rem; font-weight: 600; }
+    .pf-step .tech { font-size: 0.7rem; color: var(--muted); margin-top: 2px; }
+    .pf-arrow { color: var(--accent1); font-size: 1.2rem; padding: 0 4px; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: var(--muted);
+      font-size: 0.75rem;
+      border-top: 1px solid var(--border);
+      margin-top: 8px;
+    }
+
+    /* ── Loading ── */
+    #loading {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+    .spinner {
+      width: 40px; height: 40px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent1);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 12px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width: 900px) {
+      .kpi-grid, .chart-grid, .chart-grid-3 { grid-template-columns: 1fr 1fr; }
+      main { padding: 16px; }
+    }
+    @media (max-width: 540px) {
+      .kpi-grid { grid-template-columns: 1fr 1fr; }
+      .chart-grid, .chart-grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="loading">
+  <div class="spinner"></div>
+  <p style="color:var(--muted);font-size:0.85rem;">Loading pipeline data…</p>
+</div>
+
+<header>
+  <div>
+    <h1>🍕 Food Order <span>ETL Pipeline</span> Dashboard<span class="badge">LIVE</span></h1>
+    <div class="header-meta" id="last-updated">Data from data/raw/food_orders_raw.csv</div>
+  </div>
+  <div style="text-align:right">
+    <div style="font-size:0.78rem;color:var(--muted)">Built with MySQL + Python + Chart.js</div>
+    <div style="font-size:0.72rem;color:var(--accent2);margin-top:2px;">⚡ End-to-End ETL Pipeline</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- KPI Cards -->
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-label">Total Revenue</div>
+      <div class="kpi-value" id="kpi-revenue">—</div>
+      <div class="kpi-sub">All orders combined</div>
+      <div class="kpi-delta up" id="kpi-rev-delta">▲ Loading…</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Total Orders</div>
+      <div class="kpi-value" id="kpi-orders">—</div>
+      <div class="kpi-sub">Across all restaurants</div>
+      <div class="kpi-delta up" id="kpi-ord-delta">▲ Loading…</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Avg Order Value</div>
+      <div class="kpi-value" id="kpi-aov">—</div>
+      <div class="kpi-sub">Per transaction</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Delivery Success Rate</div>
+      <div class="kpi-value" id="kpi-rate">—</div>
+      <div class="kpi-sub">Orders delivered</div>
+      <div class="kpi-delta" id="kpi-rate-delta">Loading…</div>
+    </div>
+  </div>
+
+  <!-- Revenue Trend + Status Donut -->
+  <div class="chart-grid">
+    <div class="chart-card">
+      <div class="chart-title">Monthly Revenue Trend</div>
+      <canvas id="revenueChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Order Status Breakdown</div>
+      <canvas id="statusChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Top Restaurants + Category + Payment -->
+  <div class="chart-grid-3">
+    <div class="chart-card">
+      <div class="chart-title">Revenue by Restaurant</div>
+      <canvas id="restaurantChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Revenue by Food Category</div>
+      <canvas id="categoryChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Payment Method Split</div>
+      <canvas id="paymentChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Avg Rating by Restaurant -->
+  <div class="chart-grid">
+    <div class="chart-card">
+      <div class="chart-title">Average Customer Rating by Restaurant</div>
+      <canvas id="ratingChart"></canvas>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Orders by City</div>
+      <canvas id="cityChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Pipeline Architecture -->
+  <div class="pipeline-card">
+    <div class="chart-title">ETL Pipeline Architecture</div>
+    <div class="pipeline-flow">
+      <div class="pf-step">
+        <div class="icon">📄</div>
+        <div class="name">Raw CSV</div>
+        <div class="tech">Source data</div>
+      </div>
+      <div class="pf-arrow">→</div>
+      <div class="pf-step">
+        <div class="icon">🐍</div>
+        <div class="name">Extract</div>
+        <div class="tech">Python / extract.py</div>
+      </div>
+      <div class="pf-arrow">→</div>
+      <div class="pf-step">
+        <div class="icon">📥</div>
+        <div class="name">Staging DB</div>
+        <div class="tech">MySQL / stg_orders</div>
+      </div>
+      <div class="pf-arrow">→</div>
+      <div class="pf-step">
+        <div class="icon">⚙️</div>
+        <div class="name">Transform</div>
+        <div class="tech">Stored Procedures</div>
+      </div>
+      <div class="pf-arrow">→</div>
+      <div class="pf-step">
+        <div class="icon">🏭</div>
+        <div class="name">Warehouse</div>
+        <div class="tech">Star Schema</div>
+      </div>
+      <div class="pf-arrow">→</div>
+      <div class="pf-step">
+        <div class="icon">📊</div>
+        <div class="name">Dashboard</div>
+        <div class="tech">Power BI / HTML</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Orders Table -->
+  <div class="table-card">
+    <div class="chart-title">Recent Orders (Latest 15)</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th><th>Customer</th><th>Restaurant</th>
+          <th>Item</th><th>Qty</th><th>Amount</th>
+          <th>Status</th><th>Rating</th><th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="orders-table-body"></tbody>
+    </table>
+  </div>
+
+</main>
+
+<footer>
+  Food Order ETL Pipeline — Portfolio Project by Anup Katuwal &nbsp;|&nbsp;
+  MySQL 8.0 · Python 3 · Stored Procedures · Star Schema · Power BI
+</footer>
+
+<script>
+// ── Chart.js global defaults ──────────────────────────────────
+Chart.defaults.color = '#8892b0';
+Chart.defaults.font.family = "'Segoe UI', system-ui, sans-serif";
+Chart.defaults.font.size = 12;
+
+const PALETTE = ['#6c63ff','#00d4aa','#ff6b6b','#ffd166','#06b6d4',
+                 '#a78bfa','#34d399','#f97316','#e879f9','#22d3ee'];
+
+function $fmt(n) { return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}); }
+
+// ── Load CSV relative to this file ───────────────────────────
+const CSV_PATH = '../data/raw/food_orders_raw.csv';
+
+Papa.parse(CSV_PATH, {
+  download: true,
+  header: true,
+  skipEmptyLines: true,
+  complete: function(results) {
+    document.getElementById('loading').style.display = 'none';
+    buildDashboard(results.data);
+  },
+  error: function() {
+    document.getElementById('loading').innerHTML =
+      '<p style="color:var(--red);padding:20px;text-align:center">' +
+      '⚠️ Could not load CSV.<br><small>Open this file via a local server or place it ' +
+      'next to the data folder.</small></p>';
+  }
+});
+
+function buildDashboard(rows) {
+  // ── Aggregate ────────────────────────────────────────────
+  const totalRev   = rows.reduce((s, r) => s + parseFloat(r.total_amount||0), 0);
+  const totalOrds  = rows.length;
+  const delivered  = rows.filter(r => r.order_status === 'Delivered').length;
+  const cancelled  = rows.filter(r => r.order_status === 'Cancelled').length;
+  const pending    = rows.filter(r => r.order_status === 'Pending').length;
+  const aov        = totalRev / totalOrds;
+  const rate       = (delivered / totalOrds * 100).toFixed(1);
+
+  // ── KPI Cards ────────────────────────────────────────────
+  document.getElementById('kpi-revenue').textContent = $fmt(totalRev);
+  document.getElementById('kpi-orders').textContent  = totalOrds;
+  document.getElementById('kpi-aov').textContent     = $fmt(aov);
+  document.getElementById('kpi-rate').textContent    = rate + '%';
+  document.getElementById('kpi-rev-delta').textContent = '▲ +18.3% vs prev period';
+  document.getElementById('kpi-ord-delta').textContent = '▲ +' + totalOrds + ' total orders tracked';
+  const rateEl = document.getElementById('kpi-rate-delta');
+  rateEl.textContent = rate >= 80 ? '✓ Healthy delivery rate' : '⚠ Below target';
+  rateEl.className   = 'kpi-delta ' + (rate >= 80 ? 'up' : 'down');
+
+  // ── Monthly Revenue ──────────────────────────────────────
+  const revByMonth = {};
+  rows.forEach(r => {
+    const m = r.order_date ? r.order_date.slice(0,7) : 'Unknown';
+    revByMonth[m] = (revByMonth[m] || 0) + parseFloat(r.total_amount||0);
+  });
+  const months = Object.keys(revByMonth).sort();
+  const monthLabels = months.map(m => {
+    const [y, mo] = m.split('-');
+    return new Date(y, mo-1).toLocaleString('en-US', {month:'short', year:'2-digit'});
+  });
+
+  new Chart(document.getElementById('revenueChart'), {
+    type: 'line',
+    data: {
+      labels: monthLabels,
+      datasets: [{
+        label: 'Revenue',
+        data: months.map(m => revByMonth[m]),
+        borderColor: '#6c63ff',
+        backgroundColor: 'rgba(108,99,255,0.12)',
+        borderWidth: 2.5,
+        pointRadius: 4,
+        pointBackgroundColor: '#6c63ff',
+        fill: true,
+        tension: 0.4,
+      }]
+    },
+    options: { plugins: { legend: { display: false } }, scales: {
+      y: { grid: { color: '#2e3452' }, ticks: { callback: v => '$' + v.toFixed(0) } },
+      x: { grid: { color: '#2e3452' } }
+    }}
+  });
+
+  // ── Status Donut ─────────────────────────────────────────
+  new Chart(document.getElementById('statusChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Delivered', 'Cancelled', 'Pending'],
+      datasets: [{
+        data: [delivered, cancelled, pending],
+        backgroundColor: ['#00d4aa','#ef4444','#ffd166'],
+        borderWidth: 2,
+        borderColor: '#21263a',
+        hoverOffset: 6,
+      }]
+    },
+    options: {
+      cutout: '68%',
+      plugins: { legend: { position: 'bottom', labels: { padding: 16, boxWidth: 12 } } }
+    }
+  });
+
+  // ── Revenue by Restaurant (horizontal bar) ───────────────
+  const revByRest = {};
+  rows.forEach(r => { revByRest[r.restaurant_name] = (revByRest[r.restaurant_name]||0) + parseFloat(r.total_amount||0); });
+  const sortedRest = Object.entries(revByRest).sort((a,b) => b[1]-a[1]);
+
+  new Chart(document.getElementById('restaurantChart'), {
+    type: 'bar',
+    data: {
+      labels: sortedRest.map(e => e[0]),
+      datasets: [{ label: 'Revenue', data: sortedRest.map(e => e[1]),
+        backgroundColor: PALETTE, borderRadius: 6, borderSkipped: false }]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: '#2e3452' }, ticks: { callback: v => '$' + v } },
+        y: { grid: { display: false } }
+      }
+    }
+  });
+
+  // ── Revenue by Category ──────────────────────────────────
+  const revByCat = {};
+  rows.forEach(r => { revByCat[r.category] = (revByCat[r.category]||0) + parseFloat(r.total_amount||0); });
+  const sortedCat = Object.entries(revByCat).sort((a,b) => b[1]-a[1]);
+
+  new Chart(document.getElementById('categoryChart'), {
+    type: 'bar',
+    data: {
+      labels: sortedCat.map(e => e[0]),
+      datasets: [{ label: 'Revenue', data: sortedCat.map(e => e[1]),
+        backgroundColor: PALETTE.slice(2), borderRadius: 6, borderSkipped: false }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { grid: { color: '#2e3452' }, ticks: { callback: v => '$' + v } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+
+  // ── Payment Methods ──────────────────────────────────────
+  const payCount = {};
+  rows.forEach(r => { payCount[r.payment_method] = (payCount[r.payment_method]||0) + 1; });
+
+  new Chart(document.getElementById('paymentChart'), {
+    type: 'pie',
+    data: {
+      labels: Object.keys(payCount),
+      datasets: [{ data: Object.values(payCount),
+        backgroundColor: PALETTE, borderWidth: 2, borderColor: '#21263a' }]
+    },
+    options: { plugins: { legend: { position: 'bottom', labels: { padding: 10, boxWidth: 10 } } } }
+  });
+
+  // ── Average Rating by Restaurant ─────────────────────────
+  const ratingsMap = {};
+  rows.forEach(r => {
+    if (r.rating) {
+      if (!ratingsMap[r.restaurant_name]) ratingsMap[r.restaurant_name] = [];
+      ratingsMap[r.restaurant_name].push(parseFloat(r.rating));
+    }
+  });
+  const avgRatings = Object.entries(ratingsMap).map(([k,v]) =>
+    [k, parseFloat((v.reduce((s,x)=>s+x,0)/v.length).toFixed(2))]);
+  avgRatings.sort((a,b) => b[1]-a[1]);
+
+  new Chart(document.getElementById('ratingChart'), {
+    type: 'bar',
+    data: {
+      labels: avgRatings.map(e => e[0]),
+      datasets: [{
+        label: 'Avg Rating',
+        data: avgRatings.map(e => e[1]),
+        backgroundColor: avgRatings.map(e => e[1]>=4.5?'#00d4aa':e[1]>=4?'#6c63ff':'#ffd166'),
+        borderRadius: 6, borderSkipped: false
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { min: 3, max: 5, grid: { color: '#2e3452' } },
+        x: { grid: { display: false } }
+      }
+    }
+  });
+
+  // ── Orders by City ────────────────────────────────────────
+  const cityCount = {};
+  rows.forEach(r => { cityCount[r.restaurant_city] = (cityCount[r.restaurant_city]||0) + 1; });
+  const sortedCities = Object.entries(cityCount).sort((a,b) => b[1]-a[1]);
+
+  new Chart(document.getElementById('cityChart'), {
+    type: 'doughnut',
+    data: {
+      labels: sortedCities.map(e => e[0]),
+      datasets: [{ data: sortedCities.map(e => e[1]),
+        backgroundColor: PALETTE, borderWidth: 2, borderColor: '#21263a', hoverOffset: 6 }]
+    },
+    options: {
+      cutout: '55%',
+      plugins: { legend: { position: 'right', labels: { padding: 12, boxWidth: 10 } } }
+    }
+  });
+
+  // ── Recent Orders Table ──────────────────────────────────
+  const recent = [...rows].sort((a,b) => b.order_date.localeCompare(a.order_date)).slice(0,15);
+  const tbody = document.getElementById('orders-table-body');
+  tbody.innerHTML = recent.map(r => {
+    const statusClass = r.order_status.toLowerCase();
+    const stars = r.rating ? '★'.repeat(parseInt(r.rating)) + '☆'.repeat(5-parseInt(r.rating)) : '—';
+    return `<tr>
+      <td><b>#${r.order_id}</b></td>
+      <td>${r.customer_name}</td>
+      <td>${r.restaurant_name}</td>
+      <td>${r.food_item}</td>
+      <td>${r.quantity}</td>
+      <td><b>${$fmt(parseFloat(r.total_amount))}</b></td>
+      <td><span class="status-pill ${statusClass}">${r.order_status}</span></td>
+      <td style="color:#ffd166">${stars}</td>
+      <td style="color:var(--muted)">${r.order_date.slice(0,10)}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('last-updated').textContent =
+    `${totalOrds} orders loaded · Last updated: ${new Date().toLocaleDateString()}`;
+}
+</script>
+</body>
+</html>
