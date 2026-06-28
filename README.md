@@ -13,6 +13,8 @@
 
 [Live Dashboard](#-dashboard-preview) · [Architecture](#-architecture) · [Setup](#-quick-start) · [Tech Stack](#-tech-stack)
 
+> 💼 **Need an ETL pipeline built for your data?** [Hire me on Upwork](https://www.upwork.com/services/product/development-it-end-to-end-food-order-etl-pipeline-mysql-python-power-bi-2070932638680691364)
+
 </div>
 
 ---
