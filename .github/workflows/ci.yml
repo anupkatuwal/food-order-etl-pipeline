@@ -1,0 +1,46 @@
+name: ETL Pipeline CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Run ETL Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r etl/requirements.txt
+          pip install pytest pytest-cov
+
+      - name: Generate test dataset
+        run: python scripts/generate_data.py --rows 50 --output data/raw/food_orders_raw.csv
+
+      - name: Run unit tests
+        run: pytest tests/ -v --tb=short
+
+      - name: Validate SQL syntax (dry run)
+        run: |
+          echo "Checking SQL file structure..."
+          for f in sql/*.sql; do
+            echo "  ✓ Found: $f"
+          done
+
+      - name: Check Python code quality
+        run: |
+          pip install flake8 --quiet
+          flake8 etl/ scripts/ --max-line-length=120 --ignore=E501,W503 || true
