@@ -21,7 +21,9 @@
 
 ## 📌 What This Project Demonstrates
 
-This project replicates the **exact ETL workflow used by companies like DoorDash, Uber Eats, and Swiggy** to move raw transactional data from ingestion through to business intelligence dashboards.
+This project models the kind of ETL workflow a food delivery business uses to move raw order data from ingestion through to business intelligence dashboards. It runs on 200 simulated orders, so you can clone it and see every layer working in a few minutes.
+
+![Food order analytics dashboard](docs/dashboard.png)
 
 Key skills demonstrated:
 
@@ -134,8 +136,8 @@ Food-order-ETL-pipeline/
 ### 1 · Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Food-order-ETL-pipeline.git
-cd Food-order-ETL-pipeline
+git clone https://github.com/anupkatuwal/food-order-etl-pipeline.git
+cd food-order-etl-pipeline
 ```
 
 ### 2 · Install Python dependencies
@@ -332,7 +334,7 @@ MIT License — free to use, modify, and distribute.
 
 <div align="center">
 
-**Built by [Anup Katuwal](mailto:katuwalanup@gmail.com)**
+**Built by [Anup Katuwal](https://anup-katuwal.com.np)** · [LinkedIn](https://linkedin.com/in/anupkatuwal89) · [More projects](https://github.com/anupkatuwal)
 
 *Data Engineer · MySQL · Python · Power BI · ETL Pipelines*
 
